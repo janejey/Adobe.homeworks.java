@@ -35,6 +35,6 @@ public class Triangle {
         Triangle triangle = (Triangle) o;
         return (point1.equals(triangle.point1) && point2.equals(triangle.point2) && point3.equals(triangle.point3)) ||
                 (point1.equals(triangle.point2) && point2.equals(triangle.point1) && point3.equals(triangle.point1)) ||
-                (point1.equals(triangle.point3) && point2.equals(triangle.point1) && point3.equals(triangle.point2));
+                (point1.equals(triangle.point3) && point2.equals(triangle.point3) && point3.equals(triangle.point2));
     }
 }
