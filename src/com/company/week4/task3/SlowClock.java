@@ -9,7 +9,6 @@ public class SlowClock implements Clock{
         try {
             long startTime = System.currentTimeMillis();
             while (true) {
-                TimeUnit.MILLISECONDS.sleep(2000);
                 seconds++;
                 if (System.currentTimeMillis() - startTime >= 20000) break;
             }

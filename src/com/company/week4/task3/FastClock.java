@@ -9,7 +9,6 @@ public class FastClock implements Clock {
         try {
             long startTime = System.currentTimeMillis();
             while (true) {
-                TimeUnit.MILLISECONDS.sleep(500);
                 seconds++;
                 if (System.currentTimeMillis() - startTime >= 5000) break;
             }
