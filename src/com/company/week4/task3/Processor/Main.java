@@ -1,4 +1,4 @@
-package com.company.week4.task3;
+package com.company.week4.task3.Processor;
 
 public class Main {
     public static void main(String[] args) {

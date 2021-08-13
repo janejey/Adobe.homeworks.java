@@ -1,6 +1,6 @@
-package com.company.week4.task3;
+package com.company.week4.task3.Processor;
 
-public class ArmProcessor implements Processor{
+public class ArmProcessor implements Processor {
     public static final int delay = 2000;
 
     @Override
