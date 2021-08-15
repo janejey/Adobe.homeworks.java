@@ -1,4 +1,4 @@
-package com.company.week4.task3.Clock;
+package com.company.week4.task3.Processor;
 
 public class Decimal {
     public String getBinaryNum(long decimal) {

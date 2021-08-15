@@ -1,7 +1,5 @@
 package com.company.week4.task3.Processor;
 
-import com.company.week4.task3.Clock.Decimal;
-
 public class ArmProcessor implements Processor {
     public static final int delay = 2000;
 
