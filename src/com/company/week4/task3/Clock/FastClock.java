@@ -7,8 +7,9 @@ public class FastClock implements Clock {
         try {
             long startTime = System.currentTimeMillis();
             while (true) {
+                Thread.sleep(500);
                 seconds++;
-                if (System.currentTimeMillis() - startTime >= 5000) break;
+                if (System.currentTimeMillis() - startTime >= 10000) break;
             }
         } catch (Exception e){
             System.out.println(e);

@@ -1,9 +1,9 @@
-package com.company.week4.task3.Processor;
-
-public class X8664IntelProcessor implements Processor {
-    public static final int delay = 4000;
-    @Override
-    public String calculateBinary(long decimal) {
-
-    }
-}
+//package com.company.week4.task3.Processor;
+//
+//public class X8664IntelProcessor implements Processor {
+//    public static final int delay = 4000;
+//    @Override
+//    public String calculateBinary(long decimal) {
+//
+//    }
+//}
