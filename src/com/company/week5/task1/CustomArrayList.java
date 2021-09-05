@@ -1,6 +1,7 @@
 package com.company.week5.task1;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class CustomArrayList<T> {
     Object[] arr;
@@ -24,12 +25,13 @@ public class CustomArrayList<T> {
     public void addAtTheBeginning(T element) throws Exception {
         addAtTheIndex(element, 0);
     }
+
     public void addAtTheEnd(T element) throws Exception {
         addAtTheIndex(element, currentIndex);
     }
 
     public void addAtTheIndex(T element, int index) throws Exception {
-        if (index > currentIndex+1) {
+        if (index > currentIndex + 1) {
             throw new Exception("Invalid Index");
         }
 
@@ -56,18 +58,90 @@ public class CustomArrayList<T> {
         }
         this.arr = tmpArr;
     }
-    public int search (T element) {
-        for(int i = 0; i <= currentIndex; i++) {
-            if (arr[i] == element) {
+
+    public void deleteElement(int element) throws Exception {
+        int index = -1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals(element)) {
+                arr[i] = null;
+                break;
+            }
+        }
+        if (index == -1) {
+            throw new Exception("Element is not found.");
+        }
+    }
+
+    public void deleteIndex(int index) throws Exception {
+        if (index < 0 || index > 1000) {
+            throw new Exception("Invalid index");
+        } else {
+            for (int i = 0; i <= arr.length; i++) {
+                if (i == index) {
+                    arr[i] = null;
+                }
+            }
+        }
+    }
+
+    public int search(T element) {
+        for (int i = 0; i <= currentIndex; i++) {
+            if (arr[i].equals(element)) {
                 return i;
             }
-        }return -1;
+        }
+        return -1;
+    }
+
+    public void bubbleSort() {
+        long startTime = System.currentTimeMillis();
+        int temp = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 1; j < arr.length - i; j++) {
+                if (arr[i] == null || arr[j] == null) {
+                    continue;
+                }
+                if ((int) arr[j - 1] > (int) arr[j]) {
+                    temp = (int) arr[j];
+                    arr[j - 1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        System.out.println(System.currentTimeMillis() - startTime + " millis for Bubble Sort");
+    }
+
+    private int partitionForQuickSorting(int arr[], int begin, int end) {
+        int pivot = arr[end];
+        int i = (begin - 1);
+
+        for (int j = begin; j < end; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+
+                int swapTemp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = swapTemp;
+            }
+        }
+
+        int swapTemp = arr[i + 1];
+        arr[i + 1] = arr[end];
+        arr[end] = swapTemp;
+
+        return i + 1;
+    }
+    public void quickSort() {
+
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < currentIndex; i++) {
+            if (arr[i] == null) {
+                continue;
+            }
             sb.append(arr[i].toString() + " ");
         }
         return sb.toString();
