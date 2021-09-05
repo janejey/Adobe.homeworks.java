@@ -111,30 +111,6 @@ public class CustomArrayList<T> {
         System.out.println(System.currentTimeMillis() - startTime + " millis for Bubble Sort");
     }
 
-    private int partitionForQuickSorting(int arr[], int begin, int end) {
-        int pivot = arr[end];
-        int i = (begin - 1);
-
-        for (int j = begin; j < end; j++) {
-            if (arr[j] <= pivot) {
-                i++;
-
-                int swapTemp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = swapTemp;
-            }
-        }
-
-        int swapTemp = arr[i + 1];
-        arr[i + 1] = arr[end];
-        arr[end] = swapTemp;
-
-        return i + 1;
-    }
-    public void quickSort() {
-
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

@@ -1,4 +1,5 @@
 package com.company.week5.task2;
 
-public class CustomDoublyLinkedList {
+public class CustomDoublyLinkedList <T>{
+
 }
