@@ -18,7 +18,5 @@ public class Main {
         System.out.println(a);
         a.deleteIndex(1);
         System.out.println(a);
-        a.quickSort();
-        System.out.println(a);
     }
 }

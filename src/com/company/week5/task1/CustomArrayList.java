@@ -9,13 +9,6 @@ public class CustomArrayList<T> {
     static final int maxCapacity = 1000;
     int currentIndex;
 
-//    public CustomArrayList() {
-//        this.arr = Array.newInstance(,);
-//        this.capacity = 5;
-//        this.currentIndex = 0;
-//    }
-
-
     public CustomArrayList() {
         this.arr = new Object[50];
         this.capacity = 50;
