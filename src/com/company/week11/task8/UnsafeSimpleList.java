@@ -6,7 +6,8 @@ public class UnsafeSimpleList <T> implements SimpleList <T>{
 
     @Override
     public void add(T item) throws Exception {
-        if(length > 10_000) {
+        if(
+                length > 10_000) {
             throw new Exception("no more space");
         }
         objects[length] = item;
